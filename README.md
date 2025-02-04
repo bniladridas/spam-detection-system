@@ -64,7 +64,7 @@ git merge feature/new-model-improvement
 
 ### Repository Insights
 ![GitHub commits](https://img.shields.io/github/commit-activity/m/bniladridas/spam-detection-system?style=flat-square)
-![GitHub last commit](https://img.shields.io/badge/GitHub%20last%20commit-https://img.shields.io/github/last-commit/bniladridas/spam-detection-system?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/bniladridas/spam-detection-system/main?style=flat-square)
 ![GitHub contributors](https://img.shields.io/github/contributors/bniladridas/spam-detection-system?style=flat-square)
 
 ## 📚 Key Libraries Used
@@ -83,7 +83,7 @@ git merge feature/new-model-improvement
 
 ### Project Announcement Post
 
-[![LinkedIn Post](https://img.shields.io/badge/View%20LinkedIn%20Post-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/posts/niladridas_revolutionizing-email-security-with-machine-learning-activity-7292445051278786561-share)
+[![LinkedIn Post](https://img.shields.io/badge/View%20LinkedIn%20Post-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/feed/update/urn:li:activity:7292445054487392256/)
 
 **Key Highlights from the Post:**
 - 🚀 95% Spam Detection Accuracy
