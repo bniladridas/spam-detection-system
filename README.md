@@ -136,9 +136,9 @@ docker-compose logs spam-detection-app
 
 Example Server Logs:
 ```
-spam-detection-app-1  | [2024-02-04 05:28:45 +0000] [1] [INFO] Starting gunicorn 20.1.0
-spam-detection-app-1  | [2024-02-04 05:28:45 +0000] [1] [INFO] Listening at: http://0.0.0.0:5001
-spam-detection-app-1  | [2024-02-04 05:28:45 +0000] [1] [INFO] Using worker: sync
+spam-detection-app-1  | [2025-02-04 05:28:45 +0000] [1] [INFO] Starting gunicorn 20.1.0
+spam-detection-app-1  | [2025-02-04 05:28:45 +0000] [1] [INFO] Listening at: http://0.0.0.0:5001
+spam-detection-app-1  | [2025-02-04 05:28:45 +0000] [1] [INFO] Using worker: sync
 ```
 
 ## Running with Flask Backend
