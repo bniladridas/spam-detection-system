@@ -130,7 +130,60 @@ twine upload \
   dist/*
 ```
 
-### Package Features
+### GitHub Package Publishing Workflow
+
+#### 1. Create GitHub Secrets
+
+Go to your repository:
+1. Settings → Secrets and variables → Actions
+2. Click "New repository secret"
+
+Create these secrets:
+- `PYPI_API_TOKEN`: PyPI upload token
+- `GITHUB_TOKEN`: Personal Access Token
+
+#### 2. Trigger Package Publish
+
+Publish methods:
+1. **Manual Release**:
+   ```bash
+   # Create and push a new tag
+   git tag v1.0.0
+   git push origin v1.0.0
+   ```
+
+2. **GitHub Release**:
+   - Go to your repository
+   - Click "Releases"
+   - "Draft a new release"
+   - Select a tag
+   - Publish release
+
+#### 3. Verify Package
+
+After publishing:
+```bash
+# Install from GitHub Packages
+pip install \
+  -i https://maven.pkg.github.com/bniladridas/spam-detection-system \
+  spam-detection-system
+```
+
+### 🔍 Troubleshooting
+
+- Ensure all GitHub Actions permissions are correctly set
+- Verify token scopes
+- Check workflow logs for specific errors
+
+### 📋 Checklist
+
+- [x] Create Personal Access Token
+- [ ] Set up GitHub Secrets
+- [ ] Configure package metadata
+- [ ] Test package locally
+- [ ] Publish package
+
+## Package Features
 - Easy installation via pip
 - Supports Python 3.9+
 - Lightweight machine learning package
