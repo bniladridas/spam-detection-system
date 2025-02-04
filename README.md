@@ -90,6 +90,7 @@ pip install spam-detection-system
 ### Specific Versions
 - [PyPI Project Page v1.0.0](https://pypi.org/project/spam-detection-system/1.0.0/)
 - [PyPI Project Page v1.0.1](https://pypi.org/project/spam-detection-system/1.0.1/)
+- [PyPI Project Page v1.0.2](https://pypi.org/project/spam-detection-system/1.0.2/)
 
 ### GitHub Package Installation
 ```bash

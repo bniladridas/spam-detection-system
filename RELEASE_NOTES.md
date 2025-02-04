@@ -1,4 +1,4 @@
-## 🚀 Spam Detection System v1.0.1
+## 🚀 Spam Detection System v1.0.2
 
 ### 🌟 Key Features
 - Advanced machine learning spam detection
@@ -16,6 +16,11 @@ pip install -i https://maven.pkg.github.com/bniladridas/spam-detection-system sp
 ```
 
 ### 🔍 What's New
+#### Version 1.0.2
+- Resolved persistent PyPI upload conflicts
+- Improved package versioning strategy
+- Minor internal optimizations
+
 #### Version 1.0.1
 - Fixed package publication workflow
 - Resolved PyPI upload conflicts
