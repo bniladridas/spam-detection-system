@@ -53,11 +53,38 @@ jobs:
           --password ${{ secrets.PYPI_API_TOKEN }} \
           dist/*
 
+    - name: Create Release if Not Exists
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        # Check if release exists
+        release_exists=$(gh release list | grep "v1.0.2" || true)
+        
+        if [ -z "$release_exists" ]; then
+          echo "Creating release v1.0.2"
+          gh release create v1.0.2 \
+            --repo ${{ github.repository }} \
+            --title "v1.0.2" \
+            --notes "## 🚀 Spam Detection System v1.0.2
+
+### What's New
+- Resolved persistent PyPI upload conflicts
+- Improved package versioning strategy
+- Minor internal optimizations
+
+### Installation
+\`\`\`bash
+pip install spam-detection-system==1.0.2
+\`\`\`"
+        else
+          echo "Release v1.0.2 already exists"
+        fi
+
     - name: Upload to GitHub Release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        gh release upload ${{ github.ref_name }} dist/* \
+        gh release upload v1.0.2 dist/* \
           --repo ${{ github.repository }}
 
     - name: Verify Package
