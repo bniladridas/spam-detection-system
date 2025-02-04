@@ -49,13 +49,26 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        echo "Attempting to upload to GitHub Packages"
+        echo "Publishing to GitHub Packages"
         pip install twine
+        
+        # Explicit GitHub Packages upload
         python -m twine upload \
           --repository-url https://maven.pkg.github.com/${{ github.repository }} \
           --username ${{ github.actor }} \
           --password ${{ secrets.GITHUB_TOKEN }} \
-          dist/* || echo "GitHub Packages upload failed"
+          dist/*
+        
+        # Additional GitHub release upload
+        echo "Uploading to GitHub Release"
+        gh release upload ${{ github.ref_name }} dist/* \
+          --repo ${{ github.repository }}
+        
+        # Debug: List GitHub Packages
+        echo "Listing GitHub Packages"
+        curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+             -H "Accept: application/vnd.github.v3+json" \
+             https://api.github.com/user/packages
 
     - name: Detailed Package Verification
       run: |
