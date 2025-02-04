@@ -75,9 +75,12 @@ Send a POST request to `/predict` with JSON:
 }
 ```
 
-## Deployment
+## 🚀 Deployment
 
 ### Railway Deployment
+For a detailed guide on deploying this project on Railway.app, check out our [Railway Deployment Guide](/docs/railway_deployment_guide.md).
+
+### Live Demo
 - **Platform**: Railway
 - **URL**: https://web-production-4569.up.railway.app
 - **Endpoint**: `/predict`
