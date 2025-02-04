@@ -38,6 +38,12 @@
 - **Live Demo**: [Spam Detection Web App](https://web-production-4569.up.railway.app)
 - **Repository**: [GitHub Project](https://github.com/bniladridas/spam-detection-system)
 
+## 🌐 LinkedIn Showcase
+
+<div align="center">
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7292445051278786561" height="968" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+</div>
+
 ## 📝 License
 MIT License
 
