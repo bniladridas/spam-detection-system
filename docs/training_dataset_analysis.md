@@ -128,3 +128,8 @@ This curated dataset helps the model learn:
 - Initial classification strategies
 
 **Note**: While useful for initial model training, a robust spam detection system requires continuous learning and larger, more diverse datasets.
+
+---
+
+**Version**: 1.0.0
+**Last Updated**: 2025-02-04

@@ -121,3 +121,8 @@ report = classification_report(y_val, y_pred, output_dict=True)
 
 ## Conclusion
 This document captures the exact responses provided during our conversation about the spam detection system, preserving the detailed explanations and technical insights.
+
+---
+
+**Version**: 1.0.0
+**Last Updated**: 2025-02-04

@@ -133,3 +133,8 @@ word_weights = calculate_word_weights(training_emails, training_labels)
 
 ## Contribution
 Open to improvements, suggestions, and collaborative enhancements!
+
+---
+
+**Version**: 1.0.0
+**Last Updated**: 2025-02-04

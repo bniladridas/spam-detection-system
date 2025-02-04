@@ -57,6 +57,6 @@ Explore, contribute, and help revolutionize email security! Whether you're a dev
 ---
 
 **Version**: 1.0.0
-**Last Updated**: [Current Date]
+**Last Updated**: 2025-02-04
 
 #MachineLearning #EmailSecurity #OpenSource #AIInnovation

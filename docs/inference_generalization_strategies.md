@@ -124,3 +124,8 @@ Training Data     →    Preprocessing    →    Feature Extraction
 
 ## Contribution
 Open to improvements, suggestions, and collaborative enhancements!
+
+---
+
+**Version**: 1.0.0
+**Last Updated**: 2025-02-04

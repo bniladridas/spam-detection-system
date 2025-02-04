@@ -28,3 +28,8 @@ Just completed an end-to-end machine learning project that transforms email secu
 Excited to share this journey of transforming raw data into an intelligent spam detection solution! 
 
 #MachineLearning #ArtificialIntelligence #DataScience #OpenSource
+
+---
+
+**Version**: 1.0.0
+**Last Updated**: 2025-02-04

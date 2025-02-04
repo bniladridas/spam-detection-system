@@ -112,3 +112,8 @@
 We welcome contributions, suggestions, and feedback to improve our spam detection system!
 
 **Note**: This documentation is derived from an actual conversation about developing a spam detection model, capturing real-world insights and questions.
+
+---
+
+**Version**: 1.0.0
+**Last Updated**: 2025-02-04

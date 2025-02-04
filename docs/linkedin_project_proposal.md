@@ -126,3 +126,8 @@ A cutting-edge Spam Detection System that demonstrates the complete machine lear
 This project is more than a spam detector—it's a comprehensive exploration of machine learning's potential to solve real-world problems, demonstrating how AI can be developed, trained, and deployed with transparency and innovation.
 
 #MachineLearning #ArtificialIntelligence #OpenSource #DataScience #SpamDetection
+
+---
+
+**Version**: 1.0.0
+**Last Updated**: 2025-02-04
