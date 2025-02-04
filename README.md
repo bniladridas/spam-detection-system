@@ -77,6 +77,41 @@ git merge feature/new-model-improvement
 ## 📝 License
 MIT License
 
+## 📦 Package Installation
+
+### PyPI Installation
+```bash
+pip install spam-detection-system
+```
+
+### GitHub Package Installation
+```bash
+# Authenticate with GitHub Packages
+pip install \
+  -i https://maven.pkg.github.com/bniladridas/spam-detection-system \
+  spam-detection-system
+```
+
+### GitHub Package Publishing
+1. Create a GitHub Personal Access Token (PAT) with `read:packages` and `write:packages` scopes
+2. Set the token as an environment variable:
+```bash
+export GITHUB_TOKEN=your_personal_access_token
+```
+3. Build and publish the package:
+```bash
+python -m build
+twine upload \
+  --repository-url https://maven.pkg.github.com/bniladridas/spam-detection-system \
+  dist/*
+```
+
+### Package Features
+- Easy installation via pip
+- Supports Python 3.9+
+- Lightweight machine learning package
+- Comprehensive spam detection algorithms
+
 ## Git Operations
 
 ### Clone Repository
