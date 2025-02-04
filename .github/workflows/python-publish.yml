@@ -46,11 +46,30 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
+        # Install dependencies for GitHub Packages upload
         pip install twine
+        
+        # Upload to GitHub Packages
         python -m twine upload \
           --repository-url https://upload.pypi.org/legacy/ \
           --username __token__ \
           --password ${{ secrets.PYPI_API_TOKEN }} \
+          dist/*
+        
+        # GitHub Packages specific upload
+        python -m pip install --upgrade pip
+        python -m pip install setuptools wheel
+        python setup.py sdist bdist_wheel
+        
+        # Debug: List distribution files
+        ls -l dist/
+        
+        # Attempt GitHub Packages upload
+        echo "Attempting GitHub Packages upload"
+        python -m twine upload \
+          --repository-url https://maven.pkg.github.com/${{ github.repository }} \
+          --username ${{ github.actor }} \
+          --password ${{ secrets.GITHUB_TOKEN }} \
           dist/*
 
     - name: Create Release if Not Exists
