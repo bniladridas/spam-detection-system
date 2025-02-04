@@ -3,35 +3,37 @@ name: Publish Python Package
 on:
   release:
     types: [created]
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       packages: write
+      id-token: write
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.9'
     
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install build twine
+        pip install build twine setuptools wheel
 
     - name: Build package
       run: python -m build
-
+    
     - name: Publish to PyPI
-      env:
-        TWINE_USERNAME: __token__
-        TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
-      run: twine upload dist/*
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        user: __token__
+        password: ${{ secrets.PYPI_API_TOKEN }}
 
     - name: Publish to GitHub Packages
       env:
@@ -39,10 +41,17 @@ jobs:
       run: |
         pip install twine
         python -m twine upload \
-          --repository-url https://upload.pypi.org/legacy/ \
-          --username __token__ \
-          --password ${{ secrets.PYPI_API_TOKEN }} \
+          --repository-url https://maven.pkg.github.com/${{ github.repository }} \
+          --username ${{ github.actor }} \
+          --password ${{ secrets.GITHUB_TOKEN }} \
           dist/*
-        
-        pip install gh-action-pypi-publish
-        gh-pypi-publish --token ${{ secrets.GITHUB_TOKEN }} dist/*
+
+    - name: List published files
+      run: |
+        echo "Published files:"
+        ls -l dist/
+
+    - name: Verify package
+      run: |
+        pip install spam-detection-system
+        python -c "import spam_detection_system; print(spam_detection_system.__version__)"
