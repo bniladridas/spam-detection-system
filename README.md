@@ -93,11 +93,35 @@ pip install \
 ```
 
 ### GitHub Package Publishing
-1. Create a GitHub Personal Access Token (PAT) with `read:packages` and `write:packages` scopes
+1. **Create a Personal Access Token**:
+   Please follow the instructions below to create a token.
+
+### 🔑 Creating a Personal Access Token
+
+1. **Go to GitHub Token Creation Page**:
+   [https://github.com/settings/tokens/new](https://github.com/settings/tokens/new)
+
+2. **Token Scopes Needed**:
+   - `repo` (Full control of private repositories)
+   - `write:packages` (Upload packages to GitHub Packages)
+   - `read:packages` (Download packages from GitHub Packages)
+
+3. **Best Practices**:
+   - Set an expiration date
+   - Use a descriptive name
+   - Limit token scope to specific repositories
+   - Store token securely
+
+⚠️ **Security Warning**: 
+- Never share your token publicly
+- Use GitHub Secrets in Actions
+- Rotate tokens periodically
+
 2. Set the token as an environment variable:
 ```bash
 export GITHUB_TOKEN=your_personal_access_token
 ```
+
 3. Build and publish the package:
 ```bash
 python -m build
