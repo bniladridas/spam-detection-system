@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Current date in YYYY-MM-DD format
-CURRENT_DATE=$(date +%Y-%m-%d)
+# Fixed date
+CURRENT_DATE="2025-02-04"
 
 # Find all markdown files in the docs directory
 find /Users/niladridas/Documents/model/docs -name "*.md" | while read -r file; do
