@@ -21,12 +21,6 @@ jobs:
       with:
         python-version: '3.9'
     
-    - name: Debug Repository Information
-      run: |
-        echo "GitHub Repository: ${{ github.repository }}"
-        echo "GitHub Actor: ${{ github.actor }}"
-        echo "Workflow Trigger: ${{ github.event_name }}"
-
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -45,59 +39,23 @@ jobs:
     - name: Publish to GitHub Packages
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
       run: |
-        # Install dependencies for GitHub Packages upload
         pip install twine
         
-        # Upload to GitHub Packages
+        # Upload to PyPI
         python -m twine upload \
           --repository-url https://upload.pypi.org/legacy/ \
           --username __token__ \
-          --password ${{ secrets.PYPI_API_TOKEN }} \
+          --password ${{ env.PYPI_TOKEN }} \
           dist/*
         
-        # GitHub Packages specific upload
-        python -m pip install --upgrade pip
-        python -m pip install setuptools wheel
-        python setup.py sdist bdist_wheel
-        
-        # Debug: List distribution files
-        ls -l dist/
-        
         # Attempt GitHub Packages upload
-        echo "Attempting GitHub Packages upload"
         python -m twine upload \
           --repository-url https://maven.pkg.github.com/${{ github.repository }} \
           --username ${{ github.actor }} \
           --password ${{ secrets.GITHUB_TOKEN }} \
           dist/*
-
-    - name: Create Release if Not Exists
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        # Check if release exists
-        release_exists=$(gh release list | grep "v1.0.2" || true)
-        
-        if [ -z "$release_exists" ]; then
-          echo "Creating release v1.0.2"
-          gh release create v1.0.2 \
-            --repo ${{ github.repository }} \
-            --title "v1.0.2" \
-            --notes "## 🚀 Spam Detection System v1.0.2
-
-### What's New
-- Resolved persistent PyPI upload conflicts
-- Improved package versioning strategy
-- Minor internal optimizations
-
-### Installation
-\`\`\`bash
-pip install spam-detection-system==1.0.2
-\`\`\`"
-        else
-          echo "Release v1.0.2 already exists"
-        fi
 
     - name: Upload to GitHub Release
       env:
