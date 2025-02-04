@@ -79,10 +79,17 @@ MIT License
 
 ## 📦 Package Installation
 
-### PyPI Installation
+### PyPI
+[![PyPI version](https://badge.fury.io/py/spam-detection-system.svg)](https://pypi.org/project/spam-detection-system/)
+
+Install the latest version from PyPI:
 ```bash
 pip install spam-detection-system
 ```
+
+### Specific Versions
+- [PyPI Project Page v1.0.0](https://pypi.org/project/spam-detection-system/1.0.0/)
+- [PyPI Project Page v1.0.1](https://pypi.org/project/spam-detection-system/1.0.1/)
 
 ### GitHub Package Installation
 ```bash
@@ -324,3 +331,33 @@ python app.py
 3. Commit changes
 4. Push to branch
 5. Create pull request
+
+## PyPI Token Creation
+
+### 🔑 Creating PyPI API Token
+
+1. **Log in to PyPI**:
+   - Go to [https://pypi.org/account/login/](https://pypi.org/account/login/)
+
+2. **Navigate to Account Settings**:
+   - Click on your username
+   - Select "Account settings"
+
+3. **Create API Token**:
+   - Scroll to "API tokens" section
+   - Click "Add API token"
+   - Give token a descriptive name
+   - Select appropriate scopes
+   - Copy the generated token
+
+4. **Add Token to GitHub Secrets**:
+   - In your GitHub repository
+   - Go to Settings → Secrets → Actions
+   - Create a new repository secret
+   - Name: `PYPI_API_TOKEN`
+   - Paste your PyPI token
+
+⚠️ **Security Tips**:
+- Never share your PyPI token
+- Use scoped tokens
+- Rotate tokens periodically
