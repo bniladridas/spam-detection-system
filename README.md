@@ -1,4 +1,45 @@
-# Spam Detection System
+# 🚀 Spam Detection System
+
+## 🛠 Technology Stack
+
+### Programming Languages
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+
+### Machine Learning & Data Science
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=flat-square&logo=python&logoColor=white)
+
+### Web Framework
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
+![Gunicorn](https://img.shields.io/badge/Gunicorn-298729?style=flat-square&logo=gunicorn&logoColor=white)
+
+### Deployment
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Railway](https://img.shields.io/badge/Railway-0B0B0B?style=flat-square&logo=railway&logoColor=white)
+
+### Version Control
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
+
+### Development Tools
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
+
+## 📚 Key Libraries Used
+- **Data Processing**: NumPy, Pandas
+- **Machine Learning**: scikit-learn (MultinomialNB)
+- **Web**: Flask, Gunicorn
+- **Visualization**: Matplotlib
+- **Logging**: Python logging module
+- **Serialization**: joblib
+
+## 🔗 Quick Links
+- **Live Demo**: [Spam Detection Web App](https://web-production-4569.up.railway.app)
+- **Repository**: [GitHub Project](https://github.com/bniladridas/spam-detection-system)
+
+## 📝 License
+MIT License
 
 ## Git Operations
 
@@ -135,7 +176,3 @@ python app.py
 3. Commit changes
 4. Push to branch
 5. Create pull request
-
-## License
-
-This project is licensed under the MIT License.
