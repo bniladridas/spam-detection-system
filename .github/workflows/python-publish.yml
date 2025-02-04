@@ -33,10 +33,7 @@ jobs:
         pip install build twine setuptools wheel
 
     - name: Build package
-      run: |
-        python -m build
-        echo "Build contents:"
-        ls -l dist/
+      run: python -m build
 
     - name: Publish to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
@@ -49,38 +46,26 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        echo "Publishing to GitHub Packages"
         pip install twine
-        
-        # Explicit GitHub Packages upload
         python -m twine upload \
-          --repository-url https://maven.pkg.github.com/${{ github.repository }} \
-          --username ${{ github.actor }} \
-          --password ${{ secrets.GITHUB_TOKEN }} \
+          --repository-url https://upload.pypi.org/legacy/ \
+          --username __token__ \
+          --password ${{ secrets.PYPI_API_TOKEN }} \
           dist/*
-        
-        # Additional GitHub release upload
-        echo "Uploading to GitHub Release"
+
+    - name: Upload to GitHub Release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
         gh release upload ${{ github.ref_name }} dist/* \
           --repo ${{ github.repository }}
-        
-        # Debug: List GitHub Packages
-        echo "Listing GitHub Packages"
-        curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-             -H "Accept: application/vnd.github.v3+json" \
-             https://api.github.com/user/packages
 
-    - name: Detailed Package Verification
+    - name: Verify Package
       run: |
         echo "Dist directory contents:"
         ls -l dist/
-        echo "Attempting to install package from dist:"
-        pip install dist/spam_detection_system-*.whl || echo "Local package install failed"
-        
-        echo "Attempting PyPI install:"
-        pip install spam-detection-system || echo "PyPI install failed"
-        
-        python -c "import spam_detection_system; print(spam_detection_system.__version__)" || echo "Import failed"
+        pip install dist/spam_detection_system-*.whl
+        python -c "import spam_detection_system; print(spam_detection_system.__version__)"
 
     - name: Debug Failure
       if: failure()
