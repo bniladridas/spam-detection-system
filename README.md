@@ -26,6 +26,47 @@
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
 
+## 🔧 Version Control Workflow
+
+### Git Branching Strategy
+- **Main Branch**: `main` (primary development branch)
+- **Workflow**: Feature-based branching
+- **Commit Conventions**: Descriptive, atomic commits
+
+### Key Git Commands Used
+```bash
+# Clone the repository
+git clone https://github.com/bniladridas/spam-detection-system.git
+
+# Create a new feature branch
+git checkout -b feature/new-model-improvement
+
+# Stage changes
+git add .
+
+# Commit with a descriptive message
+git commit -m "Add comprehensive model performance metrics"
+
+# Push to remote repository
+git push origin feature/new-model-improvement
+
+# Merge feature branch (via Pull Request)
+git checkout main
+git merge feature/new-model-improvement
+```
+
+### Version Control Best Practices
+- Atomic commits
+- Descriptive commit messages
+- Regular code reviews
+- Branch protection rules
+- Continuous integration checks
+
+### Repository Insights
+![GitHub commits](https://img.shields.io/github/commit-activity/m/bniladridas/spam-detection-system?style=flat-square)
+![GitHub last commit](https://img.shields.io/badge/GitHub%20last%20commit-https://img.shields.io/github/last-commit/bniladridas/spam-detection-system?style=flat-square)
+![GitHub contributors](https://img.shields.io/github/contributors/bniladridas/spam-detection-system?style=flat-square)
+
 ## 📚 Key Libraries Used
 - **Data Processing**: NumPy, Pandas
 - **Machine Learning**: scikit-learn (MultinomialNB)
@@ -40,9 +81,17 @@
 
 ## 🌐 LinkedIn Showcase
 
-<div align="center">
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7292445051278786561" height="968" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-</div>
+### Project Announcement Post
+
+[![LinkedIn Post](https://img.shields.io/badge/View%20LinkedIn%20Post-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/posts/niladridas_revolutionizing-email-security-with-machine-learning-activity-7292445051278786561-share)
+
+**Key Highlights from the Post:**
+- 🚀 95% Spam Detection Accuracy
+- ⚡ Real-time Email Classification
+- 🔬 Machine Learning Innovation
+- 🌐 Open-Source Collaboration
+
+*Note: For the full interactive post, please visit the LinkedIn link above.*
 
 ## 📝 License
 MIT License
