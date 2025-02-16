@@ -137,3 +137,15 @@ Open to improvements, suggestions, and collaborative enhancements!
 
 **Version**: 1.0.0
 **Last Updated**: 2025-02-04
+
+## Future Improvements
+
+### Dynamic Threshold Adjustment
+- Implement adaptive thresholding based on email context
+- Adjust spam detection sensitivity dynamically
+- Improve classification accuracy
+
+### Contextual Feature Engineering
+- Develop advanced feature extraction techniques
+- Incorporate contextual information
+- Enhance model's understanding of email content

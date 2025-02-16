@@ -122,6 +122,18 @@ Training Data     →    Preprocessing    →    Feature Extraction
 4. Create dynamic vocabulary management
 5. Explore transfer learning techniques
 
+## Potential Enhancements
+
+### Transfer Learning
+- Leverage pre-trained language models
+- Fine-tune on spam detection
+- Utilize existing linguistic knowledge
+
+### Ensemble Methods
+- Combine multiple models
+- Improve robustness
+- Enhance prediction accuracy
+
 ## Contribution
 Open to improvements, suggestions, and collaborative enhancements!
 

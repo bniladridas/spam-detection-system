@@ -138,3 +138,8 @@ Open to improvements, suggestions, and collaborative enhancements!
 
 **Version**: 1.0.0
 **Last Updated**: 2025-02-04
+
+## Future Improvements
+
+1. Expand the training dataset
+2. Implement advanced feature engineering
