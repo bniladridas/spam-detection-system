@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "spam-detection-system"
-version = "1.0.3"
-description = "Machine Learning Spam Detection System"
+version = "1.0.4"
+description = "A sophisticated spam detection system using Multinomial Naive Bayes classifier trained on labeled emails. The system processes text through a machine learning pipeline that converts raw text into numerical features for accurate classification."
 readme = "README.md"
 requires-python = ">=3.8"
 license = {file = "LICENSE"}
@@ -34,8 +34,9 @@ heroku = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/bniladridas/spam-detection-system"
+Homepage = "https://web-production-4569.up.railway.app/"
 Repository = "https://github.com/bniladridas/spam-detection-system"
+Documentation = "https://github.com/bniladridas/spam-detection-system/blob/main/docs"
 
 [project.scripts]
 spam-detector = "spam_detection_system.cli:main"
